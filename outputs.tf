@@ -16,7 +16,7 @@ output "eks_endpoint" {
 output "eks_name" {
   value       = aws_eks_cluster.eks_control.id
   description = "The name of the EKS cluster."
-  depends_on  = [aws_eks_addon.vpc_cni] #custom-cni-networking module requires this to be completed before running
+  #depends_on  = [aws_eks_addon.vpc_cni] #custom-cni-networking module requires this to be completed before running
 }
 
 output "control_plane_role_arn" {
